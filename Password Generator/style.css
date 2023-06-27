@@ -8,12 +8,12 @@ body{
     color: white;
 }
 .container {
-    margin: 12%;
+    margin: 15%;
     width: 100%;
     max-width: 700px;
 }
 .display{
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
     margin-bottom: 30px;
     background: #fff;
@@ -21,9 +21,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px, 20px;
-    border-radius: 8px;
-
+    padding: 40px, 30px;
+    border-radius: 10px;
 }
 
 .container h1{
@@ -35,4 +34,37 @@ body{
     color: #019f55;
     border-bottom: 4px solid #019f55;
     padding-bottom: 7px;
+}
+
+.display img{
+    width: 40px;
+    cursor: pointer;
+}
+
+.display input {
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+    padding: 18px 26px;
+    border-radius:10px;
+}
+
+.container button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.container button{
+    border: 0;
+    outline: 0;
+    background: #019f55;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    border-radius: 10px;
+    cursor: pointer;
 }

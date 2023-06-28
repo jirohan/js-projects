@@ -63,8 +63,8 @@ const loadQuestion = () => { //1
 }
 
 const submitQuiz = () => { //12
-    const data = questions[index];
-    const ans = getAnswer() //15
+    const data = questions[index]; //15.2
+    const ans = getAnswer() //15.1
     if(ans === data.correct){ //16
         right++; //20
     } else{ //21
@@ -98,8 +98,10 @@ const reset = () => { //27
 
 const endQuiz = () => { //30
     document.getElementById("box").innerHTML = `
-    <h3>Thank you for playing quiz</h3>
-    <h2>${right} / ${total} are correct.</h2>
+    <div style="text-align:center">
+        <h3>Thank you for playing quiz</h3>
+        <h2>${right} / ${total} are correct.</h2>
+    </div>    
     `
 }; 
 

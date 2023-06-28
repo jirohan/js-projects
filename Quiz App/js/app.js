@@ -46,12 +46,15 @@ const questions = [
     }
 ]
 
+//index decide first question
 let index = 0;
 let total = questions.length;
 let right = 0;
 let wrong = 0;  
 const quesBox = document.getElementById("quesBox")
 const optionInputs = document.querySelectorAll('.options')
+
+//1st load Questions
 const loadQuestion = () => {
     if(index === total){
        return endQuiz()
@@ -65,6 +68,7 @@ const loadQuestion = () => {
     optionInputs[3].nextElementSibling.innerText = data.d;
 }
 
+//checked value
 const submitQuiz = () => {
     const data = questions[index];
     const ans = getAnswer()
@@ -99,10 +103,13 @@ const reset = () => {
     )
 }
 
+//result declare
 const endQuiz = () => {
     document.getElementById("box").innerHTML = `
-    <h3> Thank you for playing Quiz</h3>
-    <h2> ${right} / ${total} are correct
+    <div style ="text-align:center">
+        <h3> Thank you for playing Quiz</h3>
+        <h2> ${right} / ${total} are correct.
+    </div>    
     `
 }
 

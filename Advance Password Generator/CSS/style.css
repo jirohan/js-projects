@@ -11,7 +11,7 @@ input:focus-visible {
 }
 
 .main {
-    background-color: #3498db;
+    background-color: rgb(220, 177, 97);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ input:focus-visible {
     min-width: 400px;
     padding: 10px;
     box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
-    background: #2980b9;
+    background: rgb(175, 128, 40);
     border-radius: 2px;
     margin-top: 10px;
 }
@@ -55,7 +55,7 @@ label {
     outline: 0;
     border: 0;
     padding: 10px;
-    background-color: #34495e;
+    background-color: rgb(220, 177, 97);
     color: white;
     margin-top: 10px;
     border-radius: 5px;

@@ -1,10 +1,10 @@
-//1st
-const upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
-const lowerSet = "abcdefghijklmnopqrstuvwxyz"; 
-const numberSet = "1234567890"; 
-const symbolSet = "`!@#$%^&*()_+-={}:,./[]";  
+//1st 
+const upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerSet = "abcdefghijklmnopqrstuvwxyz";
+const numberSet = "1234567890";
+const symbolSet = "`!@#$%^&*()_+-=[]{},./><";
 
-//3rd selectors
+//3rd
 const passBox = document.getElementById("pass-box")
 const totalChar = document.getElementById("total-char")
 const upperInput = document.getElementById("upper-case")
@@ -15,9 +15,9 @@ const symbolInput = document.getElementById("symbols")
 //2nd
 const getRandomData = (dataSet) => {
     return dataSet[Math.floor(Math.random() * dataSet.length)]
-} 
+}
 
-//4th
+//4th 
 const generatePassword = (password = "") => {
     if(upperInput.checked){
         password += getRandomData(upperSet)
@@ -31,7 +31,7 @@ const generatePassword = (password = "") => {
     if(symbolInput.checked){
         password += getRandomData(symbolSet)
     }
-    if (password.length < totalChar.value) {
+    if(password.length < totalChar.value){
         return generatePassword(password)
     }
     passBox.innerText = truncateString(password, totalChar.value);
@@ -41,18 +41,17 @@ generatePassword();
 
 //5th
 document.getElementById("btn").addEventListener(
-    "click", function () {
+    "click", function(){
         generatePassword();
     }
 )
 
-//6th
+//6th 
 function truncateString(str, num){
     if(str.length > num){
-        let subStr = str.substring(0, num);
+        let subStr = str.sunstring(0, num);
         return subStr;
     } else {
         return str;
     }
 }
-

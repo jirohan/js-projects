@@ -8,12 +8,6 @@ addBtn.addEventListener(
     }
 );
 
-function checkLocalStorage() {
-     const IsNotes = JSON.parse(localStorage.getItem("notes"));
-    console.log(IsNotes);
-}
-
-
 const saveNotes = () => {
     const notes = document.querySelectorAll(".note textarea");
     const data = [];
@@ -25,7 +19,7 @@ const saveNotes = () => {
     localStorage.setItem("notes",JSON.stringify(data))
 }
 
-const addNote = () => {
+const addNote = (text = "") => {
     const note = document.createElement("div");
     note.classList.add("note")
     note.innerHTML = `
@@ -33,7 +27,7 @@ const addNote = () => {
                 <i class="save fa-solid fa-floppy-disk"></i>
                 <i class="trash fa-solid fa-trash"></i>
             </div>
-            <textarea></textarea>
+            <textarea>${text}</textarea>
         `;
 
 
@@ -54,3 +48,14 @@ const addNote = () => {
     saveNotes();
 
 }
+
+(
+function checkLocalStorage() {
+     const IsNotes = JSON.parse(localStorage.getItem("notes"));
+     IsNotes.forEach(
+        (IsNotes) => {
+            addNote(IsNotes);
+        }
+     )
+}()
+)

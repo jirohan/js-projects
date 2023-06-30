@@ -16,6 +16,11 @@ const saveNotes = () => {
             data.push(note.value);
         }
     )
+    if(data.length === 0){
+        localStorage.removeItem("notes")
+    } else{
+        localStorage.setItem("notes", JSON.stringify(data))
+    }
     localStorage.setItem("notes",JSON.stringify(data))
 }
 
@@ -50,12 +55,16 @@ const addNote = (text = "") => {
 }
 
 (
-function checkLocalStorage() {
+function () {
      const IsNotes = JSON.parse(localStorage.getItem("notes"));
-     IsNotes.forEach(
-        (IsNotes) => {
-            addNote(IsNotes);
+     if(IsNotes === null){
+        addNote()
+     } else{
+        IsNotes.forEach(
+            (IsNotes) => {
+                addNote(IsNotes);
+            }
+        )
         }
-     )
-}()
+    }()
 )

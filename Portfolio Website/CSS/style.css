@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(56, 1, 1);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(32, 8, 63);
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav ul li{
+   list-style: none;
+   margin: 0 23px;
+}
+
+.left{
+    font-size: 1.5rem;
+}
+
+.firstSection{
+    display: flex;
+    justify-content: space-around;
+    margin: 23px 0;
+}
+
+.firstSection div{
+    width: 30%;
+}
+
+.leftSection{
+    background-color: red;
+    width: 35px;
+}

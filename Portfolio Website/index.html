@@ -18,10 +18,11 @@
         <div class="left">Rajina's Portfolio</div>
         <div class="right">
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Portfolio</a></li>
+                <li><a href="/">Contact</a></li>
             </ul>
         </div>
       </nav>
@@ -30,12 +31,91 @@
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                left
+                Hi, My name is <span class="purple">Rajina</span> 
+                <div>and I am a passionate</div>
+                <span id="element"></span>
             </div>
             <div class="rightSection">
-                right
+                <img src="./image/content-creator.png" alt="">
             </div>
         </section>
+        <hr>
+        <!-------------------- about -------------------->
+           <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="./image/profile.jpeg" alt="">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dolores voluptas ex voluptates! Reiciendis sequi inventore architecto quibusdam dicta dolore eaque culpa quaerat omnis nostrum corrupti enim eos neque hic provident, deleniti accusantium repudiandae aperiam mollitia magnam odio voluptates blanditiis tempora. Hic blanditiis labore, debitis animi numquam eligendi ratione perspiciatis quisquam  </p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Content Creator</span><br>Experience content creator</li>
+                                    <li><span>Copy Writer</span><br>Experience content creator</li>
+                                    <li><span>Digital Marketer</span><br>Experience content creator</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2020-2021</span><br>Hudl CF</li>
+                                    <li><span>2021-2023</span><br>Copy Writer and Content Creator at Eyecore Digital</li>
+                                    <li><span>2022-present</span><br>Digital Marketing Head</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2016</span><br>SLC</li>
+                                    <li><span>2016-2018</span><br>+2 from Captial Hill College, Teku Kathmandu</li>
+                                    <li><span>2018-2023</span><br>BBS from DAV College, Bhanimandal Lalitpur</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+
+           <!-- Services -->
+
+           <div id="services">
+            <div class="container">
+                <h1 class="sub-title">Services</h1>
+                <div class="services-list">
+                    
+                </div>
+            </div>
+           </div>
     </main>
+    
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Content Creator', 'Copy Writer', 'Digital Marketer'],
+          typeSpeed: 50,
+        });
+      </script>
+
+      <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+      </script>
   </body>
 </html>
